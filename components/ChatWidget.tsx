@@ -352,6 +352,11 @@ export default function ChatWidget() {
   }, [chatOpen]);
 
   const handleFormSubmit = (data: { name: string; email: string; phone: string }) => {
+    fetch("https://hook.eu1.make.com/gej9h54cmq4b9htfsqylut57rvd58fij", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: data.name, email: data.email, phone: data.phone }),
+    }).catch(() => {});
     setFormSubmitted(true);
     setMessages((prev) => {
       const updated = prev.map((m) => (m.showForm ? { ...m, showForm: false } : m));
