@@ -250,7 +250,7 @@ function CalendlyEmbed() {
         </div>
       </div>
       <a
-        href="https://calendly.com"
+        href="https://cal.eu/botosbenedek/30min"
         target="_blank"
         rel="noopener noreferrer"
         style={{
